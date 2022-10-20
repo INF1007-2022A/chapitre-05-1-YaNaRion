@@ -13,45 +13,25 @@ def use_prefixes() -> List[str]:
     return prenom
 
 
-def prime_integer_summation() -> int:
-    num = 2
-    somme = 0
-    n = 0
-    while n <= 100:
-        for i in range(2, num):
-            if i == num:
-                n+=1
-                somme += num
-                num += 1
-                break
-            if i == num-1:
-                n += 1
-                somme += num
-                num += 1
-                break
-            if num % i != 0:
-                continue
-            if num % i == 0 and i!=1:
-                num += 1
-                break
 
-
-
-
-    return somme
 
 
 def factorial(number: int) -> int:
-    return 0
-
+    y = 1
+    for x in range(1,int(number+1)):
+        y *= x
+    return y
 
 def use_continue() -> None:
-    pass
+    for i in range(1,11):
+        list = []
+        if i == 5:
+            continue
+        elif i != 5:
+            list[i-1]=i
+    print(list)
 
-
-def verify_ages(groups: List[List[int]]) -> List[bool]:
-    return []
-
+#def verify_ages(groups: List[List[int]]) -> List[bool]:
 
 def main() -> None:
     number = -4.325
@@ -59,7 +39,7 @@ def main() -> None:
 
     print(f"La liste des noms générés avec les préfixes est: {use_prefixes()}")
 
-    print(f"La somme des 100 premiers nombre premier est : {prime_integer_summation()}")
+    #print(f"La somme des 100 premiers nombre premier est : {prime_integer_summation()}")
 
     number = 10
     print(f"La factiorelle du nombre {number} est: {factorial(number)}")
